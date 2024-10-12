@@ -1,6 +1,7 @@
 package net.bball_262.woodlands;
 
 import com.mojang.logging.LogUtils;
+import net.bball_262.woodlands.blocks.ModBlocks;
 import net.bball_262.woodlands.items.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,6 +29,7 @@ public class Woodlands
         IEventBus modEventBus = context.getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
